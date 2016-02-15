@@ -1,0 +1,22 @@
+.ns-cover-image {
+	display: block;
+	margin: auto;
+	@media(min-width: $breakpoint-medium){
+		height: 500px;
+	}
+}
+
+.ns-logo {
+	font-size: 22px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.ns-main-nav {
+	float: none;
+	display: inline-block;
+	& > li {
+		float: none;
+		display: inline-block;
+	}
+}

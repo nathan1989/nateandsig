@@ -1,0 +1,23 @@
+{
+  "name": "Our theme",
+  "homepage": "https://nathansmithdeveloper.com",
+  "authors": [
+    "Nathan Smith <nathansmithdeveloper@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "uikit": "^2.24.3"
+  },
+  "overrides": {
+    "uikit": {
+      "main": [
+        "./js/uikit.js",
+        "./fonts/fontawesome-webfont.ttf",
+        "./fonts/fontawesome-webfont.woff",
+        "./fonts/fontawesome-webfont.woff2",
+        "./fonts/FontAwesome.otf"
+      ]
+    }
+  }
+}
