@@ -17,7 +17,7 @@
 
 		// vars
 		$image = get_sub_field('timeline_photo');
-		$size = 'thumbnail';
+		$size = 'medium';
 		$title = get_sub_field('timeline_title');
 		$text = get_sub_field('timeline_text');
 

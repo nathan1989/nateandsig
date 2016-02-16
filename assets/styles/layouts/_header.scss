@@ -10,6 +10,12 @@
 	font-size: 22px;
 	line-height: 1.5;
 	margin-bottom: 20px;
+	color: $base-body-color;
+	font-weight: bold;
+	&:hover,&:focus {
+		color: $base-body-color;
+		text-decoration: none;
+	}
 }
 
 .ns-main-nav {

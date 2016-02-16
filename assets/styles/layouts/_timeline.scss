@@ -1,14 +1,14 @@
 .tl-wrapper {
 	position: relative;
 	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 18px;
-		height: 100%;
-		width: 4px;
-		background: #d7e4ed;
 		@media(min-width: $breakpoint-medium){				
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 18px;
+			height: 100%;
+			width: 4px;
+			background: #d7e4ed;
 			left: 50%;
 			margin-left: -2px;
 		}
@@ -16,7 +16,9 @@
 }
 
 .tl-row {
-	min-height: 160px;
+	@media(min-width: $breakpoint-medium){				
+		min-height: 360px;	
+	}
 	margin: 20px 0;
 	&:nth-child(even){
 		.tl-text {
@@ -30,7 +32,9 @@
 .tl-image {	
 	float: left;
 	margin-right: 20px;
+	width: 150px;
 	@media(min-width: $breakpoint-medium){		
+		width: auto;
 		margin-right: 0;		
 		position: absolute;
 		left: 50%;
@@ -42,7 +46,7 @@
 .tl-text {
 	padding: 10px;
 	@media(min-width: $breakpoint-medium){				
-		width: 40%;
+		width: 30%;
 		padding: 20px;
 	}
 }
