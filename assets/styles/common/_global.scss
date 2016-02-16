@@ -1,0 +1,35 @@
+body {
+	background: #fff;	
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+}
+
+// Clear floats
+.ns-clear {
+	clear: both;
+}
+
+// box size all the things
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+// transitions
+h1,
+h2,
+h3,
+h4,
+p,
+label,
+a,
+img,
+button {
+	transition: all 300ms ease-out;
+}
+
+// forms
+:focus {
+	outline: 0;
+}

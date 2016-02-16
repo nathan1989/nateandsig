@@ -1,0 +1,48 @@
+.tl-wrapper {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 18px;
+		height: 100%;
+		width: 4px;
+		background: #d7e4ed;
+		@media(min-width: $breakpoint-medium){				
+			left: 50%;
+			margin-left: -2px;
+		}
+	}
+}
+
+.tl-row {
+	min-height: 160px;
+	margin: 20px 0;
+	&:nth-child(even){
+		.tl-text {
+			@media(min-width: $breakpoint-medium){				
+				float: right;
+			}
+		}
+	}
+}
+
+.tl-image {	
+	float: left;
+	margin-right: 20px;
+	@media(min-width: $breakpoint-medium){		
+		margin-right: 0;		
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+}
+
+.tl-text {
+	padding: 10px;
+	@media(min-width: $breakpoint-medium){				
+		width: 40%;
+		padding: 20px;
+	}
+}

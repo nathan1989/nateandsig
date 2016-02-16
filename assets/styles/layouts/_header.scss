@@ -19,4 +19,14 @@
 		float: none;
 		display: inline-block;
 	}
+	a:after {
+		content: '';
+		display: block;
+		opacity: 0;
+		transition: all 300ms ease-out;
+	}
+	a:hover:after {
+		border-bottom: 1px dashed #000;
+		opacity: 1;
+	}
 }
