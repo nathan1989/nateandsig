@@ -28,8 +28,6 @@
 
 		$class = ($counter % 2 == 0 ? 'uk-animation-slide-right' : 'uk-animation-slide-left');
 
-		// $class = if ($counter % 2 == 0){ echo 'uk-animation-slide-right'; } else { echo 'uk-animation-slide-left'; };
-
 		?>
 
 		<li class="uk-position-relative tl-row">
