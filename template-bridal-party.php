@@ -14,7 +14,7 @@
 
 		<!-- top section -->
 		<div class="uk-container-center ns-2-col-wrapper">
-			<div class="uk-grid uk-grid-collapse">
+			<div class="uk-grid">
 
 		<?php while( have_rows('about_us') ): the_row();
 
@@ -30,11 +30,11 @@
 
 			<div class="uk-width-medium-1-2">
 				<div class="uk-thumbnail">
-					<figure class="uk-overlay">
-				    	<img src="<?php echo $photo[0]; ?>" alt="<?php echo $name; ?>">
-					    <figcaption class="uk-overlay-panel uk-text-center"><h2><?php echo $name; ?></h2></figcaption>
-					</figure>
-				    <div class="uk-thumbnail-caption"><?php echo $content; ?></div>
+			    	<img src="<?php echo $photo[0]; ?>" alt="<?php echo $name; ?>" class="uk-border-circle">
+				    <div class="uk-thumbnail-caption">
+					    <h2 class="uk-text-center"><?php echo $name; ?></h2>
+					    <?php echo $content; ?>
+				    </div>
 				</div>
 			</div>
 
@@ -48,11 +48,11 @@
 	<div class="uk-container-center ns-8-col-wrapper">
 		<div class="uk-grid">
 
-			<div class="uk-grid uk-grid-collapse uk-width-medium-1-2">
+			<div class="uk-grid uk-width-medium-1-2 uk-grid-collapse">
 				<div class="uk-width-medium-1-2">
 					<div class="uk-thumbnail">
 						<figure class="uk-overlay">
-					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 						    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 						</figure>
 					    <div class="uk-thumbnail-caption">
@@ -63,7 +63,7 @@
 				<div class="uk-width-medium-1-2">
 					<div class="uk-thumbnail">
 						<figure class="uk-overlay">
-					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 						    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 						</figure>
 					    <div class="uk-thumbnail-caption">
@@ -74,7 +74,7 @@
 				<div class="uk-width-medium-1-2">
 					<div class="uk-thumbnail">
 						<figure class="uk-overlay">
-					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 						    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 						</figure>
 					    <div class="uk-thumbnail-caption">
@@ -85,7 +85,7 @@
 				<div class="uk-width-medium-1-2">
 					<div class="uk-thumbnail">
 						<figure class="uk-overlay">
-					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 						    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 						</figure>
 					    <div class="uk-thumbnail-caption">
@@ -95,11 +95,11 @@
 				</div>
 			</div>
 
-			<div class="uk-grid uk-grid-collapse uk-width-medium-1-2">
+			<div class="uk-grid uk-width-medium-1-2 uk-grid-collapse">
 				<div class="uk-width-medium-1-2">
 					<div class="uk-thumbnail">
 						<figure class="uk-overlay">
-					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 						    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 						</figure>
 					    <div class="uk-thumbnail-caption">
@@ -110,7 +110,7 @@
 				<div class="uk-width-medium-1-2">
 					<div class="uk-thumbnail">
 						<figure class="uk-overlay">
-					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 						    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 						</figure>
 					    <div class="uk-thumbnail-caption">
@@ -121,7 +121,7 @@
 				<div class="uk-width-medium-1-2">
 					<div class="uk-thumbnail">
 						<figure class="uk-overlay">
-					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 						    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 						</figure>
 					    <div class="uk-thumbnail-caption">
@@ -132,7 +132,7 @@
 				<div class="uk-width-medium-1-2">
 					<div class="uk-thumbnail">
 						<figure class="uk-overlay">
-					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+					    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 						    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 						</figure>
 					    <div class="uk-thumbnail-caption">
@@ -146,11 +146,11 @@
 	</div>
 
 	<div class="uk-container-center ns-4-col-wrapper">
-		<div class="uk-grid uk-grid-collapse">
+		<div class="uk-grid">
 			<div class="uk-width-medium-1-4">
 				<div class="uk-thumbnail">
 					<figure class="uk-overlay">
-				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 					    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 					</figure>
 				    <div class="uk-thumbnail-caption">
@@ -161,7 +161,7 @@
 			<div class="uk-width-medium-1-4">
 				<div class="uk-thumbnail">
 					<figure class="uk-overlay">
-				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 					    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 					</figure>
 				    <div class="uk-thumbnail-caption">
@@ -172,7 +172,7 @@
 			<div class="uk-width-medium-1-4">
 				<div class="uk-thumbnail">
 					<figure class="uk-overlay">
-				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 					    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 					</figure>
 				    <div class="uk-thumbnail-caption">
@@ -183,7 +183,7 @@
 			<div class="uk-width-medium-1-4">
 				<div class="uk-thumbnail">
 					<figure class="uk-overlay">
-				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="">
+				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
 					    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
 					</figure>
 				    <div class="uk-thumbnail-caption">
