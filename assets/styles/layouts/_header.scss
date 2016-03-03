@@ -31,7 +31,8 @@
 		opacity: 0;
 		transition: all 300ms ease-out;
 	}
-	a:hover:after {
+	& > li >a:hover:after,
+	& > li.uk-active > a:after {
 		border-bottom: 1px dashed #000;
 		opacity: 1;
 	}

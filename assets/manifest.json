@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://localhost/nateandsig"
+    "devUrl": "http://localhost:8888/nateandsig"
   }
 }

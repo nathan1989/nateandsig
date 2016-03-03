@@ -1,11 +1,11 @@
 // UIkit mixins
 @import "../../bower_components/uikit/scss/uikit-mixins.scss";
 
-// // Custom variable overrides
-@import "common/variables";
-
 // // UIkit variables
 @import "../../bower_components/uikit/scss/uikit-variables.scss";
+
+// // Custom variable overrides
+@import "common/variables";
 
 // // UIkit files
 @import "../../bower_components/uikit/scss/uikit.scss";
