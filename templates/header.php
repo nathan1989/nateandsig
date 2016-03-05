@@ -5,8 +5,8 @@
 
     if (  is_front_page() ) { ?>
       <div class="uk-container uk-container-center uk-margin-top uk-margin-bottom">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=70&txt=750%C3%97500&w=750&h=500" class="ns-cover-image" />
-        <!-- <img src="<?= get_template_directory_uri(); ?>/dist/images/cover.jpg" class="ns-cover-image" /> -->
+        <!-- <img src="https://placeholdit.imgix.net/~text?txtsize=70&txt=750%C3%97500&w=750&h=500" class="ns-cover-image" /> -->
+        <img src="<?= get_template_directory_uri(); ?>/dist/images/cover.jpg" class="ns-cover-image" />
       </div>
     <?php } ?>
     <!-- Nathan and Sigourney text -->
