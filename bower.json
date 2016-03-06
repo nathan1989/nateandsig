@@ -13,6 +13,7 @@
     "uikit": {
       "main": [
         "./js/uikit.js",
+        "./js/components/grid.js",
         "./fonts/fontawesome-webfont.ttf",
         "./fonts/fontawesome-webfont.woff",
         "./fonts/fontawesome-webfont.woff2",
