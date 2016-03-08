@@ -24,7 +24,8 @@ class NavWalker extends \Walker_Nav_Menu {
 
   public function start_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat("\t", $depth);
-    $output .= "\n$indent<div class=\"uk-dropdown uk-dropdown-navbar\"><ul class=\"sub-menu\">\n";
+    $output = preg_replace( "/(.*)(\<li.*?class\=\")([^\"]*)(\".*?)$/", "$1$2$3 has-submenu$4", $output );
+    $output .= "\n$indent<div class=\"uk-dropdown uk-dropdown-navbar\"><ul class=\"uk-nav uk-nav-navbar\">\n";
   }
 
   public function end_lvl( &$output, $depth = 0, $args = array() ) {
@@ -53,7 +54,7 @@ class NavWalker extends \Walker_Nav_Menu {
 
       foreach ($children_elements[$element->ID] as $child) {
         if ($child->current_item_parent || Utils\url_compare($this->archive, $child->url)) {
-          $element->classes[] = 'active';
+          $element->classes[] = 'uk-active';
         }
       }
     }
@@ -61,7 +62,7 @@ class NavWalker extends \Walker_Nav_Menu {
     $element->is_active = strpos($this->archive, $element->url);
 
     if ($element->is_active) {
-      $element->classes[] = 'active';
+      $element->classes[] = 'uk-active';
     }
 
     if ($depth === 0) {
@@ -81,11 +82,11 @@ class NavWalker extends \Walker_Nav_Menu {
       $classes = str_replace('current_page_parent', '', $classes);
 
       if (Utils\url_compare($this->archive, $item->url)) {
-        $classes[] = 'active';
+        $classes[] = 'uk-active';
       }
     }
 
-    $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'active', $classes);
+    $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'uk-active', $classes);
     $classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
 
     $classes[] = 'nav__item--' . $slug;

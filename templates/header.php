@@ -22,6 +22,7 @@
         wp_nav_menu( array(
           'theme_location' => 'primary_navigation',
           'walker' => new NavWalker(),
+          'menu_class' => 'uk-navbar-nav uk-clearfix ns-main-nav'
         ) );
       endif;
       ?>
