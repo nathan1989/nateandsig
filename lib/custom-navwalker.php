@@ -24,7 +24,6 @@ class NavWalker extends \Walker_Nav_Menu {
 
   public function start_lvl( &$output, $depth = 0, $args = array() ) {
     $indent = str_repeat("\t", $depth);
-    $output = preg_replace( "/(.*)(\<li.*?class\=\")([^\"]*)(\".*?)$/", "$1$2$3 has-submenu$4", $output );
     $output .= "\n$indent<div class=\"uk-dropdown uk-dropdown-navbar\"><ul class=\"uk-nav uk-nav-navbar\">\n";
   }
 
@@ -59,16 +58,10 @@ class NavWalker extends \Walker_Nav_Menu {
       }
     }
 
-    $element->is_active = strpos($this->archive, $element->url);
+    $element->is_active = (!empty($element->url) && strpos($this->archive, $element->url));
 
     if ($element->is_active) {
       $element->classes[] = 'uk-active';
-    }
-
-    if ($depth === 0) {
-      $element->classes[] = 'nav__item';
-    } else {
-      $element->classes[] = 'nav__sub-item';
     }
 
     parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
@@ -78,6 +71,7 @@ class NavWalker extends \Walker_Nav_Menu {
   public function cssClasses($classes, $item) {
     $slug = sanitize_title($item->title);
 
+    // Fix core `active` behavior for custom post types
     if ($this->cpt) {
       $classes = str_replace('current_page_parent', '', $classes);
 
@@ -89,11 +83,15 @@ class NavWalker extends \Walker_Nav_Menu {
     $classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'uk-active', $classes);
     $classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
 
-    $classes[] = 'nav__item--' . $slug;
+    // Re-add core `menu-item-has-children` class on parent elements
+    if ($item->is_subitem) {
+      $classes[] = 'uk-parent';
+    }
 
     $classes = array_unique($classes);
+    $classes = array_map('trim', $classes);
 
-    return array_filter($classes, 'Roots\\Soil\\Utils\\is_element_empty');
+    return array_filter($classes);
   }
 }
 
@@ -117,3 +115,5 @@ function nav_menu_args($args = '') {
 
   return array_merge($args, $nav_menu_args);
 }
+add_filter('wp_nav_menu_args', __NAMESPACE__ . '\\nav_menu_args');
+add_filter('nav_menu_item_id', '__return_null');
