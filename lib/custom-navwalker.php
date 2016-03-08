@@ -22,6 +22,16 @@ class NavWalker extends \Walker_Nav_Menu {
   private $cpt; // Boolean, is current post a custom post type
   private $archive; // Stores the archive page for current URL
 
+  public function start_lvl( &$output, $depth = 0, $args = array() ) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<div class=\"uk-dropdown uk-dropdown-navbar\"><ul class=\"sub-menu\">\n";
+  }
+
+  public function end_lvl( &$output, $depth = 0, $args = array() ) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "$indent</ul></div>\n";
+  }
+
   public function __construct() {
     add_filter('nav_menu_css_class', array($this, 'cssClasses'), 10, 2);
     add_filter('nav_menu_item_id', '__return_null');

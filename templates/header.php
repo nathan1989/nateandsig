@@ -1,7 +1,7 @@
 <header class="banner">
     <!-- giant image thing goes here (homepage only) -->
     <?php
-    use Roots\Soil\CustomNav;
+    use Roots\Soil\CustomNav\NavWalker;
 
     if (  is_front_page() ) { ?>
       <div class="uk-container uk-container-center uk-margin-top uk-margin-bottom">
