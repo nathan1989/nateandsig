@@ -55,7 +55,7 @@
 
 			?>
 
-			<div class="uk-width-small-1-2 uk-text-center uk-margin-bottom">
+			<div class="uk-width-small-1-2 uk-text-center uk-margin-bottom" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay: 400}">
 				<?php if($image): ?>
 		    		<img src="<?php echo $photo[0]; ?>" alt="<?php echo $name; ?>" class="uk-border-circle">
 				<?php else: ?>
@@ -86,7 +86,7 @@
 
 			?>
 
-			<div class="uk-width-small-1-2 uk-text-center uk-margin-bottom">
+			<div class="uk-width-small-1-2 uk-text-center uk-margin-bottom" data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay: 400}">
 				<?php if($image): ?>
 		    		<img src="<?php echo $photo[0]; ?>" alt="<?php echo $name; ?>" class="uk-border-circle">
 				<?php else: ?>
@@ -105,90 +105,40 @@
 
 	</div>
 
-	<div class="uk-text-center uk-margin-large-bottom ns-people ns-people-small">
-		<div>
-	    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=180&h=180" alt="" class="uk-border-circle">
-			<h2 class="uk-margin-small-top">Name name</h2>
-			<div class="ns-people-caption">
-				<p>
-				Age: 29<br>
-				Job: Retail manager<br>
-				How they met us: Family<br>
-				Fun fact: Tey ar gay
-				</p>
-			</div>
-		</div>
-		<div>
-	    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=180&h=180" alt="" class="uk-border-circle">
-			<h2 class="uk-margin-small-top">Name name</h2>
-			<div class="ns-people-caption">
-				<p>is cool blah blah blah blah blah blah blahis cool blah blah blah blah blah blah blahis cool blah blah blah blah blah blah blah</p>
-			</div>
-		</div>
-		<div>
-	    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=180&h=180" alt="" class="uk-border-circle">
-			<h2 class="uk-margin-small-top">Name name</h2>
-			<div class="ns-people-caption">
-				<p>is cool blah blah blah blah blah blah blahis cool blah blah blah blah blah blah blahis cool blah blah blah blah blah blah blah</p>
-			</div>
-		</div>
-		<div>
-	    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=180&h=180" alt="" class="uk-border-circle">
-			<h2 class="uk-margin-small-top">Name name</h2>
-			<div class="ns-people-caption">
-				<p>is cool blah blah blah blah blah blah blahis cool blah blah blah blah blah blah blahis cool blah blah blah blah blah blah blah</p>
-			</div>
-		</div>
-	</div>
 
-	<!-- <div class="uk-container-center ns-4-col-wrapper">
-		<div class="uk-grid">
-			<div class="uk-width-medium-1-4">
-				<div class="uk-thumbnail">
-					<figure class="uk-overlay">
-				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
-					    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
-					</figure>
-				    <div class="uk-thumbnail-caption">
-				    	wow just wow
-				    </div>
+	<?php if( have_rows('about_flower_girls') ):?>
+
+		<div class="uk-text-center uk-margin-large-bottom ns-people ns-people-small">
+		<?php
+			$i = -100;
+			 while( have_rows('about_flower_girls') ): the_row();
+			 $i+=100;
+			// vars
+			$image = get_sub_field('about_flower_girls_photo');
+			$size = 'bridal-small';
+			$name = get_sub_field('about_flower_girls_name');
+			$content = get_sub_field('about_flower_girls_content');
+
+			$photo = wp_get_attachment_image_src($image, $size);
+
+			?>
+
+			<div data-uk-scrollspy="{cls:'uk-animation-slide-bottom', delay: <?php echo $i; ?>}">
+				<?php if($image): ?>
+		    		<img src="<?php echo $photo[0]; ?>" alt="<?php echo $name; ?>" class="uk-border-circle">
+				<?php else: ?>
+		    		<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=180&h=180" alt="" class="uk-border-circle">
+		    	<?php endif; ?>
+				<div class="ns-people-caption">
+					<h2 class="uk-text-center"><?php echo $name; ?></h2>
+					<?php echo $content; ?>
 				</div>
 			</div>
-			<div class="uk-width-medium-1-4">
-				<div class="uk-thumbnail">
-					<figure class="uk-overlay">
-				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
-					    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
-					</figure>
-				    <div class="uk-thumbnail-caption">
-				    	wow just wow
-				    </div>
-				</div>
-			</div>
-			<div class="uk-width-medium-1-4">
-				<div class="uk-thumbnail">
-					<figure class="uk-overlay">
-				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
-					    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
-					</figure>
-				    <div class="uk-thumbnail-caption">
-				    	wow just wow
-				    </div>
-				</div>
-			</div>
-			<div class="uk-width-medium-1-4">
-				<div class="uk-thumbnail">
-					<figure class="uk-overlay">
-				    	<img src="https://placeholdit.imgix.net/~text?txtsize=28&txt=image&w=200&h=200" alt="" class="uk-border-circle">
-					    <figcaption class="uk-overlay-panel uk-text-center"><h2>Name</h2></figcaption>
-					</figure>
-				    <div class="uk-thumbnail-caption">
-				    	wow just wow
-				    </div>
-				</div>
-			</div>
+
+		<?php endwhile; ?>
 		</div>
-	</div> -->
+
+	<?php endif; ?>
 
 </div>
 
