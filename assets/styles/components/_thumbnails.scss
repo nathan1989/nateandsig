@@ -1,51 +1,40 @@
-.ns-thumbnail-wrapper {
-	[class*=uk-width] {
-		margin-bottom: 20px;
-		@media(min-width: $breakpoint-medium){
-			margin-bottom: 5px;
+.ns-people {
+	& > div {
+		margin-right: 15px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+		@media(min-width: $breakpoint-small){		
+			display: inline-block;
 		}
 	}
-	.uk-grid[class*=uk-width] {
-		margin-top: 0;
+	.ns-people-caption {
+		margin: auto;
 	}
 }
 
-[class*=col-wrapper]{
-	margin-bottom: 40px;
+.ns-people-caption {
+	padding: 5px 10px;
 }
 
-.ns-2-col-wrapper {
-	clear: both;
-	@media(min-width: $breakpoint-medium){
-		width: 65%;		
+.ns-people-large {
+	@media(max-width: $breakpoint-medium){
+		img {
+			width: 200px;
+		}		
 	}
-	.uk-thumbnail-caption {
+	.ns-people-caption {
 		max-width: 300px;
 	}
 }
 
-.ns-8-col-wrapper,
-.ns-4-col-wrapper {
-	// max-width: 200px;
-	clear: both;
-	@media(min-width: $breakpoint-medium){
-		width: 90%;		
+.ns-people-small {
+	@media(max-width: $breakpoint-medium){
+		img {
+			width: 150px;
+		}		
 	}
-	.uk-overlay-panel {
-		padding: 10px;
+	.ns-people-caption {
+		max-width: 180px;
 	}
-	.uk-thumbnail-caption {
-		max-width: 200px;
-	}
-}
-
-.ns-4-col-wrapper {
-	@media(min-width: $breakpoint-medium){
-		width: 80%;
-	}
-}
-
-.uk-thumbnail-caption {
-	padding: 10px 15px;
-	text-align: left; 
 }
