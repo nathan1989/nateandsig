@@ -14,6 +14,7 @@
       "main": [
         "./js/uikit.js",
         "./js/components/grid.js",
+        "./js/components/lightbox.js",
         "./fonts/fontawesome-webfont.ttf",
         "./fonts/fontawesome-webfont.woff",
         "./fonts/fontawesome-webfont.woff2",

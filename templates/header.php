@@ -1,4 +1,4 @@
-<header class="banner">
+<header class="ns-header">
     <!-- giant image thing goes here (homepage only) -->
     <?php
     use Roots\Soil\CustomNav\NavWalker;

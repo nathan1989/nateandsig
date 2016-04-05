@@ -37,6 +37,9 @@ function setup() {
   add_theme_support('post-thumbnails');
   add_image_size( 'bridal-medium', 200, 200 );
   add_image_size( 'bridal-small', 180, 180 );
+  add_image_size( 'gallery-album-cover', 300, 200, true );
+  add_image_size( 'gallery-image-preview', 225, 225 );
+  add_image_size( 'gallery-image', 800, 600 );
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
